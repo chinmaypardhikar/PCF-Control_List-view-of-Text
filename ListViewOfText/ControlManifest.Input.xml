@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control namespace="ChinmayPardhikar" constructor="ListViewOfText" version="0.0.1" display-name-key="ListViewOfText" description-key="List view control allows you to enter the text in list view and You can delete the text as per your choice in Single Click. It is user friendly with modern UI." control-type="standard" >
+    <external-service-usage enabled="false">
+    </external-service-usage>
+    <property name="D365Field" display-name-key="D365Field" description-key="D365Field" of-type-group="TextGroup" usage="bound" required="true" />
+    <property name="placeholderName" display-name-key="Input_PlaceHolder_Text" description-key="Enter the Input PlaceHolder Text" of-type="SingleLine.Text" usage="input" required="true" default-value="Enter your comments here"/>
+    <property name="ButtonName" display-name-key="Button_Name" description-key="Enter the Button Name. Try to make it short means Single word button Name for Better UI." of-type="SingleLine.Text" usage="input" required="true" default-value="Add"/>
+    <property name="ButtonColor" display-name-key="Button_Color" description-key="Enter the Button color as per your requirement. It should be in Color Hex Format." of-type="SingleLine.Text" usage="input" required="true" default-value="#6471c1"/>
+    <property name="TextSeparator" display-name-key="Text_Separator" description-key="As storing value in single field. Need to separete the text." of-type="SingleLine.Text" usage="input" required="true" default-value="ǂ"/>
+    <property name="DeleteImage" display-name-key="Delete_Image_Link" description-key="Link of Delete Icon for each comment we have entered." of-type="SingleLine.Text" usage="input" required="true" default-value="https://content.powerapps.com/resource/uci-infra/resources/images/Delete.2713f7a803a36d57dcc050874401427f.svg"/>    
+    <property name="VerticalScrollBar" display-name-key="Vertical_Scroll_Bar_After_X_height" description-key="If you want vertical scroll bar after some height then enter specific height with rem property Example 20rem, 22rem, 30rem, etc. If you dont want it just enter none value as input." of-type="SingleLine.Text" usage="input" default-value="30rem"/>    
+    
+    <type-group name="TextGroup">
+      <type>SingleLine.Text</type>
+      <type>SingleLine.TextArea</type>
+      <type>Multiple</type>
+    </type-group>
+    
+    <resources>
+      <code path="index.ts" order="1"/>
+      <css path="css/ListViewOfText.css" order="1" />
+    </resources>
+  </control>
+</manifest>
